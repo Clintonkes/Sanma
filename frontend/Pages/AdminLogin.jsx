@@ -24,18 +24,20 @@ export default function AdminLogin() {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--color-bg-alt)] flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl p-10 w-full max-w-md shadow-lg border border-gray-100">
         <div className="text-center mb-8">
           <div className="flex items-center justify-between gap-4 mb-6">
-            <Link to="/" className="text-sm font-semibold text-gray-500 hover:text-[var(--color-primary)] transition-colors">
+            <Link to="/" className="text-sm font-semibold text-gray-500 hover:text-emerald-600 transition-colors">
               Back to Home
             </Link>
             <span className="text-xs uppercase tracking-[0.2em] text-gray-400">Admin Login</span>
           </div>
           <div className="flex items-center justify-center gap-2 mb-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] rounded-xl flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-lg font-[Montserrat]">S</span>
+            <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center shadow-md">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
             </div>
             <div className="text-left">
               <span className="text-xl font-bold text-gray-900 block leading-tight font-[Montserrat]">Sanma Admin</span>

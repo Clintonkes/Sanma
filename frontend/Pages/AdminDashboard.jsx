@@ -26,13 +26,13 @@ function formatDate(value) {
 function statusBadge(status) {
   const normalized = String(status || '').toLowerCase()
   if (normalized === 'completed') return 'bg-green-100 text-green-700'
-  if (normalized === 'approved') return 'bg-[var(--color-primary-lightest)] text-[var(--color-primary)]'
+  if (normalized === 'approved') return 'bg-emerald-100 text-emerald-700'
   if (normalized === 'canceled') return 'bg-red-100 text-red-700'
   return 'bg-amber-100 text-amber-800'
 }
 
 function readBadge(isRead) {
-  return isRead ? 'bg-green-100 text-green-700' : 'bg-[var(--color-primary-lightest)] text-[var(--color-primary)]'
+  return isRead ? 'bg-green-100 text-green-700' : 'bg-emerald-100 text-emerald-700'
 }
 
 export default function AdminDashboard() {
@@ -207,18 +207,18 @@ export default function AdminDashboard() {
   const renderDashboard = () => (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100">
-        <div className="w-14 h-14 bg-[var(--color-primary-lightest)] rounded-2xl flex items-center justify-center mx-auto mb-4">
-          <svg className="w-7 h-7 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+        <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <svg className="w-7 h-7 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
         </div>
         <h3 className="font-bold text-gray-900 mb-2">Total Bookings</h3>
-        <p className="text-3xl font-bold text-[var(--color-primary)]">{counts.bookings}</p>
+        <p className="text-3xl font-bold text-emerald-600">{counts.bookings}</p>
       </div>
       <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100">
-        <div className="w-14 h-14 bg-[var(--color-primary-lightest)] rounded-2xl flex items-center justify-center mx-auto mb-4">
-          <svg className="w-7 h-7 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+        <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <svg className="w-7 h-7 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
         </div>
         <h3 className="font-bold text-gray-900 mb-2">Contact Messages</h3>
-        <p className="text-3xl font-bold text-[var(--color-primary)]">{counts.messages}</p>
+        <p className="text-3xl font-bold text-emerald-600">{counts.messages}</p>
       </div>
     </div>
   )
@@ -229,7 +229,7 @@ export default function AdminDashboard() {
         <button type="button" onClick={() => updateBookingStatus(booking.id, 'approved')} className="btn-secondary text-xs px-3 py-2">
           Approve
         </button>
-        <button type="button" onClick={() => updateBookingStatus(booking.id, 'completed')} className="btn-accent text-xs px-3 py-2">
+        <button type="button" onClick={() => updateBookingStatus(booking.id, 'completed')} className="px-3 py-2 rounded-lg bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-700">
           Complete
         </button>
         <button type="button" onClick={() => updateBookingStatus(booking.id, 'canceled')} className="px-3 py-2 rounded-lg bg-red-600 text-white text-xs font-semibold hover:bg-red-700">
@@ -392,15 +392,17 @@ export default function AdminDashboard() {
         >
           <div className="p-6 h-full flex flex-col">
             <div className="flex items-start justify-between gap-4 mb-8">
-            <div>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-sm font-[Montserrat]">S</span>
+              <div>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                  </div>
+                  <h2 className="text-xl font-bold text-gray-900 font-[Montserrat]">Sanma Admin</h2>
                 </div>
-                <h2 className="text-xl font-bold text-gray-900 font-[Montserrat]">Sanma Admin</h2>
+                <p className="text-sm text-gray-500 mt-1">Management console</p>
               </div>
-              <p className="text-sm text-gray-500 mt-1">Management console</p>
-            </div>
               <button
                 type="button"
                 onClick={() => setSidebarOpen(false)}
@@ -425,7 +427,7 @@ export default function AdminDashboard() {
                     setSidebarOpen(false)
                   }}
                   className={`w-full text-left px-4 py-3 rounded-xl transition-colors ${
-                    activeTab === key ? 'bg-[var(--color-primary-lightest)] text-[var(--color-primary)] font-semibold' : 'text-gray-600 hover:bg-gray-50'
+                    activeTab === key ? 'bg-emerald-50 text-emerald-700 font-semibold' : 'text-gray-600 hover:bg-gray-50'
                   }`}
                 >
                   {label}
@@ -470,7 +472,7 @@ export default function AdminDashboard() {
               <div className="max-h-[92vh] overflow-y-auto p-5 sm:p-6 md:p-8">
                 <div className="flex items-start justify-between gap-4 mb-6">
                   <div>
-                      <h3 className="text-2xl font-bold text-gray-900 font-[Montserrat]">
+                    <h3 className="text-2xl font-bold text-gray-900 font-[Montserrat]">
                       {modalState.type === 'booking' && 'Booking Details'}
                       {modalState.type === 'message' && 'Contact Message'}
                     </h3>
@@ -497,10 +499,10 @@ export default function AdminDashboard() {
                       <button type="button" onClick={() => updateBookingStatus(modalState.data.id, 'approved')} className="btn-secondary">
                         Approve
                       </button>
-                      <button type="button" onClick={() => updateBookingStatus(modalState.data.id, 'completed')} className="btn-accent">
+                      <button type="button" onClick={() => updateBookingStatus(modalState.data.id, 'completed')} className="px-4 py-3 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700">
                         Complete
                       </button>
-                      <button type="button" onClick={() => updateBookingStatus(modalState.data.id, 'canceled')} className="px-4 py-3 rounded-full bg-red-600 text-white font-semibold hover:bg-red-700">
+                      <button type="button" onClick={() => updateBookingStatus(modalState.data.id, 'canceled')} className="px-4 py-3 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700">
                         Cancel
                       </button>
                     </div>
@@ -521,7 +523,6 @@ export default function AdminDashboard() {
                     </div>
                   </div>
                 )}
-
               </div>
             )}
           </div>
@@ -532,7 +533,7 @@ export default function AdminDashboard() {
         <div className="fixed inset-0 z-[70] bg-black/60 flex items-center justify-center p-4">
           <div className="w-full max-w-md rounded-3xl bg-white shadow-2xl">
             <div className="p-6 sm:p-8">
-                <h3 className="text-2xl font-bold text-gray-900 font-[Montserrat]">Log out?</h3>
+              <h3 className="text-2xl font-bold text-gray-900 font-[Montserrat]">Log out?</h3>
               <p className="mt-2 text-sm leading-6 text-gray-600">
                 You will be signed out of the admin area and returned to the login screen.
               </p>
