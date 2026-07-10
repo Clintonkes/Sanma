@@ -369,7 +369,7 @@ export default function AdminDashboard() {
         <button type="button" onClick={() => setSidebarOpen(true)} className="px-3 py-2 rounded-lg border border-gray-200 text-gray-700">
           Menu
         </button>
-        <div className="font-bold text-gray-900" style={{ fontFamily: "'DM Sans', sans-serif" }}>Greerz Admin</div>
+        <div className="font-bold text-gray-900 font-[Montserrat]">Sanma Admin</div>
         <button type="button" onClick={handleLogout} className="text-sm font-semibold text-red-600">
           Logout
         </button>
@@ -394,10 +394,10 @@ export default function AdminDashboard() {
             <div className="flex items-start justify-between gap-4 mb-8">
             <div>
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-[var(--color-primary)] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-sm">G</span>
+                <div className="w-8 h-8 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-sm font-[Montserrat]">S</span>
                 </div>
-                <h2 className="text-xl font-bold text-gray-900" style={{ fontFamily: "'DM Sans', sans-serif" }}>Greerz Admin</h2>
+                <h2 className="text-xl font-bold text-gray-900 font-[Montserrat]">Sanma Admin</h2>
               </div>
               <p className="text-sm text-gray-500 mt-1">Management console</p>
             </div>
@@ -448,7 +448,7 @@ export default function AdminDashboard() {
         <main className="flex-1 min-h-screen p-4 md:p-8 md:ml-0 min-w-0 max-w-full">
           <div className="hidden md:flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 capitalize" style={{ fontFamily: "'DM Sans', sans-serif" }}>{activeTab.replace('-', ' ')}</h1>
+              <h1 className="text-2xl font-bold text-gray-900 capitalize font-[Montserrat]">{activeTab.replace('-', ' ')}</h1>
               <p className="text-gray-600">Manage bookings and messages.</p>
             </div>
           </div>
@@ -470,7 +470,7 @@ export default function AdminDashboard() {
               <div className="max-h-[92vh] overflow-y-auto p-5 sm:p-6 md:p-8">
                 <div className="flex items-start justify-between gap-4 mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                      <h3 className="text-2xl font-bold text-gray-900 font-[Montserrat]">
                       {modalState.type === 'booking' && 'Booking Details'}
                       {modalState.type === 'message' && 'Contact Message'}
                     </h3>
@@ -532,7 +532,7 @@ export default function AdminDashboard() {
         <div className="fixed inset-0 z-[70] bg-black/60 flex items-center justify-center p-4">
           <div className="w-full max-w-md rounded-3xl bg-white shadow-2xl">
             <div className="p-6 sm:p-8">
-              <h3 className="text-2xl font-bold text-gray-900" style={{ fontFamily: "'DM Sans', sans-serif" }}>Log out?</h3>
+                <h3 className="text-2xl font-bold text-gray-900 font-[Montserrat]">Log out?</h3>
               <p className="mt-2 text-sm leading-6 text-gray-600">
                 You will be signed out of the admin area and returned to the login screen.
               </p>
