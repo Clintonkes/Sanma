@@ -170,6 +170,26 @@ export default function Home() {
               </Link>
             </div>
           </div>
+
+          {/* Hero Illustration */}
+          <div className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 w-[480px] h-[480px]">
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-200 to-emerald-400 rounded-full opacity-20 blur-3xl" />
+            <div className="relative w-full h-full flex items-center justify-center">
+              <svg viewBox="0 0 400 400" fill="none" className="w-full h-full drop-shadow-2xl">
+                <rect x="60" y="100" width="280" height="220" rx="24" fill="white" stroke="#d1fae5" strokeWidth="2" />
+                <rect x="80" y="120" width="100" height="80" rx="12" fill="#ecfdf5" />
+                <rect x="200" y="120" width="120" height="36" rx="8" fill="#ecfdf5" />
+                <rect x="200" y="168" width="80" height="32" rx="8" fill="#ecfdf5" />
+                <rect x="80" y="220" width="240" height="12" rx="6" fill="#d1fae5" />
+                <rect x="80" y="244" width="180" height="12" rx="6" fill="#d1fae5" />
+                <rect x="80" y="268" width="200" height="12" rx="6" fill="#d1fae5" />
+                <rect x="80" y="292" width="140" height="12" rx="6" fill="#d1fae5" />
+                <circle cx="320" cy="80" r="40" fill="#059669" opacity="0.9" />
+                <path d="M308 80l8 8 16-16" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                <rect x="40" y="340" width="320" height="16" rx="8" fill="#059669" opacity="0.1" />
+              </svg>
+            </div>
+          </div>
         </div>
       </section>
 

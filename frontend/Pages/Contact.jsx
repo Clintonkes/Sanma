@@ -83,37 +83,19 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Info Cards */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4 font-[Montserrat]">Get In Touch</h2>
-            <p className="text-gray-600 text-lg">Have questions or ready to book? Reach out — we are here to help.</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-            {contacts.map((c, i) => (
-              <div key={i} className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-100 hover:border-emerald-200 transition">
-                <div className="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-5 text-emerald-600">
-                  {c.icon}
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 font-[Montserrat]">{c.title}</h3>
-                {c.content}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Form */}
-      <section className="pb-24 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4 font-[Montserrat]">Send a Message</h2>
+            <p className="text-gray-600 text-lg">Fill out the form below and we will get back to you within 24 hours.</p>
+          </div>
           <div className="bg-gray-50 rounded-2xl p-8 lg:p-12 border border-gray-100">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 font-[Montserrat]">Send a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
-                  <input type="text" placeholder="John" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="input-field" required />
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                  <input type="text" placeholder="John Smith" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="input-field" required />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
@@ -138,6 +120,23 @@ export default function Contact() {
                 {loading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Info Cards */}
+      <section className="pb-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {contacts.map((c, i) => (
+              <div key={i} className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-100 hover:border-emerald-200 transition">
+                <div className="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-5 text-emerald-600">
+                  {c.icon}
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2 font-[Montserrat]">{c.title}</h3>
+                {c.content}
+              </div>
+            ))}
           </div>
         </div>
       </section>
