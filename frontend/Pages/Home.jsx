@@ -176,17 +176,44 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-200 to-emerald-400 rounded-full opacity-20 blur-3xl" />
             <div className="relative w-full h-full flex items-center justify-center">
               <svg viewBox="0 0 400 400" fill="none" className="w-full h-full drop-shadow-2xl">
-                <rect x="60" y="100" width="280" height="220" rx="24" fill="white" stroke="#d1fae5" strokeWidth="2" />
-                <rect x="80" y="120" width="100" height="80" rx="12" fill="#ecfdf5" />
-                <rect x="200" y="120" width="120" height="36" rx="8" fill="#ecfdf5" />
-                <rect x="200" y="168" width="80" height="32" rx="8" fill="#ecfdf5" />
-                <rect x="80" y="220" width="240" height="12" rx="6" fill="#d1fae5" />
-                <rect x="80" y="244" width="180" height="12" rx="6" fill="#d1fae5" />
-                <rect x="80" y="268" width="200" height="12" rx="6" fill="#d1fae5" />
-                <rect x="80" y="292" width="140" height="12" rx="6" fill="#d1fae5" />
+                {/* Back card */}
+                <rect x="55" y="75" width="300" height="260" rx="32" fill="#6ee7b7" opacity="0.35" transform="rotate(-6 205 205)" />
+                {/* Main card */}
+                <rect x="70" y="90" width="260" height="240" rx="28" fill="white" stroke="#d1fae5" strokeWidth="2" />
+
+                {/* Window */}
+                <rect x="100" y="115" width="200" height="100" rx="14" fill="#ecfdf5" stroke="#a7f3d0" strokeWidth="2" />
+                <line x1="200" y1="115" x2="200" y2="215" stroke="#a7f3d0" strokeWidth="2" />
+                <line x1="100" y1="165" x2="300" y2="165" stroke="#a7f3d0" strokeWidth="2" />
+                <path d="M120 130 L150 130 L120 200 Z" fill="white" opacity="0.6" />
+                <path d="M168 130 L182 130 L142 205 L128 205 Z" fill="white" opacity="0.4" />
+
+                {/* Floor */}
+                <rect x="90" y="292" width="220" height="14" rx="6" fill="#d1fae5" />
+
+                {/* Spray bottle */}
+                <rect x="172" y="240" width="56" height="65" rx="14" fill="#059669" />
+                <rect x="180" y="248" width="14" height="45" rx="7" fill="white" opacity="0.15" />
+                <rect x="188" y="218" width="24" height="26" rx="8" fill="#047857" />
+                <rect x="178" y="198" width="46" height="24" rx="10" fill="#047857" />
+                <path d="M224 202 C 238 202 240 216 232 222" fill="none" stroke="#047857" strokeWidth="6" strokeLinecap="round" />
+                <rect x="222" y="192" width="20" height="10" rx="4" fill="#10b981" />
+
+                {/* Mist */}
+                <circle cx="253" cy="176" r="4" fill="#a7f3d0" />
+                <circle cx="268" cy="156" r="6" fill="#a7f3d0" opacity="0.8" />
+                <circle cx="246" cy="146" r="3" fill="#6ee7b7" />
+
+                {/* Sparkles */}
+                <path d="M295 140 C297 148 299 150 307 152 C299 154 297 156 295 164 C293 156 291 154 283 152 C291 150 293 148 295 140 Z" fill="#059669" />
+                <path d="M112 238 C113.4 243 114.6 244.2 119.6 245.6 C114.6 247 113.4 248.2 112 253.2 C110.6 248.2 109.4 247 104.4 245.6 C109.4 244.2 110.6 243 112 238 Z" fill="#34d399" />
+                <path d="M262 258 C263 261.6 263.8 262.4 267.4 263.4 C263.8 264.4 263 265.2 262 268.8 C261 265.2 260.2 264.4 256.6 263.4 C260.2 262.4 261 261.6 262 258 Z" fill="#a7f3d0" />
+
+                {/* Quality badge */}
                 <circle cx="320" cy="80" r="40" fill="#059669" opacity="0.9" />
                 <path d="M308 80l8 8 16-16" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                <rect x="40" y="340" width="320" height="16" rx="8" fill="#059669" opacity="0.1" />
+
+                <rect x="40" y="352" width="320" height="16" rx="8" fill="#059669" opacity="0.1" />
               </svg>
             </div>
           </div>
