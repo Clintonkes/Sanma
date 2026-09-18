@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./momar_cleaning.db")
 
     RESEND_API_KEY: str = os.getenv("RESEND_API_KEY", "")
-    RESEND_FROM_EMAIL: str = os.getenv("RESEND_FROM_EMAIL", "Greerz LLC <no-reply@greerzcleaning.com>")
+    RESEND_FROM_EMAIL: str = os.getenv("RESEND_FROM_EMAIL", "Greerz LLC <no-reply@sanmallc.org>")
     RESEND_FROM_NAME: str = os.getenv("RESEND_FROM_NAME", "Greerz LLC")
     PUBLIC_SITE_URL: str = os.getenv("PUBLIC_SITE_URL", "http://localhost:8000")
 

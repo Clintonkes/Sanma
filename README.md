@@ -56,9 +56,9 @@ SECRET_KEY=your-secret-key
 ADMIN_EMAIL=momargroup@proton.me
 ADMIN_PASSWORD=your-secure-password
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxxx
-RESEND_FROM_EMAIL=Momar Group <no-reply@momargroup.com>
+RESEND_FROM_EMAIL=Momar Group <no-reply@sanmallc.org>
 RESEND_FROM_NAME=Momar Group LLC
-PUBLIC_SITE_URL=https://yourdomain.com
+PUBLIC_SITE_URL=https://sanmallc.org
 ```
 
 ## Admin Bootstrap

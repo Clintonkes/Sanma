@@ -49,7 +49,7 @@ export default function AdminLogin() {
             <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
             <input
               type="email"
-              placeholder="admin@sanma.com"
+              placeholder="admin@sanmallc.org"
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
               className="input-field"
